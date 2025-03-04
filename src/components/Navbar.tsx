@@ -61,20 +61,20 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-5">
-          <div className="flex items-center space-x-4 mr-2">
-            <a href="#features" className="text-gray-300 hover:text-vetprimary transition-colors text-sm">
+        <div className="hidden md:flex items-center space-x-6">
+          <div className="flex items-center space-x-6 mr-4">
+            <a href="#features" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
               Features
             </a>
-            <a href="#demo" className="text-gray-300 hover:text-vetprimary transition-colors text-sm">
+            <a href="#demo" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
               How It Works
             </a>
-            <a href="#faq" className="text-gray-300 hover:text-vetprimary transition-colors text-sm">
+            <a href="#faq" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
               FAQ
             </a>
             <Button 
               variant="ghost"
-              className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs p-0"
+              className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs p-0 whitespace-nowrap"
               onClick={scrollToDisclaimer}
             >
               <AlertTriangle size={12} />
@@ -82,11 +82,11 @@ const Navbar = () => {
             </Button>
           </div>
           
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-4">
             <Button 
               asChild 
               variant="ghost" 
-              className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs py-1 px-2"
+              className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs py-1 px-2 whitespace-nowrap"
             >
               <a href="https://aidoctorgpt.lovable.app/" target="_blank" rel="noopener noreferrer">
                 <Stethoscope size={14} />
@@ -99,7 +99,7 @@ const Navbar = () => {
               variant="default"
               size="sm"
               className={cn(
-                "bg-vetprimary hover:bg-vethighlight text-white btn-hover-effect glow-on-hover transition-transform duration-300",
+                "bg-vetprimary hover:bg-vethighlight text-white btn-hover-effect glow-on-hover transition-transform duration-300 whitespace-nowrap",
                 isButtonHovered ? "scale-110 shadow-lg shadow-vetprimary/50" : ""
               )}
               onMouseEnter={() => setIsButtonHovered(true)}
