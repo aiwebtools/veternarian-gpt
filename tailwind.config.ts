@@ -1,3 +1,4 @@
+
 import { type Config } from "tailwindcss"
 import { fontFamily } from "tailwindcss/defaultTheme"
 import animatePlugin from "tailwindcss-animate"
@@ -22,6 +23,10 @@ export default {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
         display: ["Poppins", ...fontFamily.sans],
+      },
+      boxShadow: {
+        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+        'glow': '0 0 15px rgba(59, 130, 246, 0.5)',
       },
       colors: {
         vetchardark: "#0f172a",
