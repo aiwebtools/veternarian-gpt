@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import DisclaimerModal from '@/components/DisclaimerModal';
+import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 
 const Index = () => {
   // Initialize scroll animations when component mounts
@@ -75,6 +76,7 @@ const Index = () => {
       </main>
       <Footer />
       <DisclaimerModal />
+      <ElevenLabsWidget />
     </div>
   );
 };
