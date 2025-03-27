@@ -5,6 +5,9 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
+// Set ElevenLabs API key globally
+window.ELEVENLABS_API_KEY = 'sk_d4ba415b39332fdbfc89f2ee1eb32967ed650b6c1b71b4a2';
+
 // Function to check if we're in a Facebook browser
 const isFacebookBrowser = () => {
   const userAgent = navigator.userAgent || navigator.vendor;
