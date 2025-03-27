@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Headset } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ElevenLabsWidget = () => {
@@ -44,9 +43,12 @@ const ElevenLabsWidget = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleWidget}
-        className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center hover:shadow-glow hover:shadow-purple-400/50 transition-all duration-300"
+        className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full px-3 py-2 shadow-lg flex items-center justify-center hover:shadow-glow hover:shadow-purple-400/50 transition-all duration-300"
       >
-        <Headset size={24} className={isOpen ? "animate-pulse" : ""} />
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm font-bold">LIVE</span>
+          <span className={`h-2 w-2 rounded-full bg-red-500 ${isOpen ? "animate-pulse" : ""}`}></span>
+        </div>
       </motion.button>
     </div>
   );
