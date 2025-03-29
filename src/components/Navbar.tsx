@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { PawPrint, Menu, X, Stethoscope, Heart, AlertTriangle } from 'lucide-react';
+import { PawPrint, Menu, X, Stethoscope, Heart, AlertTriangle, Brain } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,9 +63,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex items-center space-x-6 mr-4">
-            <a href="#features" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
-              Features
-            </a>
             <a href="#demo" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
               How It Works
             </a>
@@ -83,6 +80,17 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center space-x-4">
+            <Button 
+              asChild 
+              variant="ghost" 
+              className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs py-1 px-2 whitespace-nowrap"
+            >
+              <a href="https://mentalwellnessgpt.lovable.app/" target="_blank" rel="noopener noreferrer">
+                <Brain size={14} />
+                <span className="ml-1">MENTAL WELLNESS GPT</span>
+              </a>
+            </Button>
+            
             <Button 
               asChild 
               variant="ghost" 
@@ -137,6 +145,16 @@ const Navbar = () => {
       >
         <div className="flex flex-col space-y-3 px-6">
           <a 
+            href="https://mentalwellnessgpt.lovable.app/" 
+            className="text-gray-300 py-2 border-b border-vetmuted flex items-center gap-2"
+            onClick={() => setMobileMenuOpen(false)}
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Brain size={16} />
+            MENTAL WELLNESS GPT
+          </a>
+          <a 
             href="https://aidoctorgpt.lovable.app/" 
             className="text-gray-300 py-2 border-b border-vetmuted flex items-center gap-2"
             onClick={() => setMobileMenuOpen(false)}
@@ -145,13 +163,6 @@ const Navbar = () => {
           >
             <Stethoscope size={16} />
             AI DOCTOR GPT
-          </a>
-          <a 
-            href="#features" 
-            className="text-gray-300 py-2 border-b border-vetmuted"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Features
           </a>
           <a 
             href="#demo" 

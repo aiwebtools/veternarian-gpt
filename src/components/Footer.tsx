@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PawPrint, Heart, Mail, Phone, Instagram, Shield, AlertTriangle, FileText } from 'lucide-react';
+import { PawPrint, Heart, Mail, Phone, Instagram, Shield, AlertTriangle, FileText, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Custom TikTok icon component
@@ -122,6 +122,17 @@ const Footer = () => {
                   onClick={() => window.open('https://www.aiwebtools.ai', '_blank')}
                 >
                   MORE AI TOOLS
+                </Button>
+              </li>
+              <li>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="text-gray-300 border-gray-700 hover:bg-vetprimary hover:text-white"
+                  onClick={() => window.open('https://mentalwellnessgpt.lovable.app/', '_blank')}
+                >
+                  <Brain size={12} className="mr-2" />
+                  MENTAL WELLNESS GPT
                 </Button>
               </li>
               <li>
