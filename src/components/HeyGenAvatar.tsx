@@ -1,34 +1,66 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const HeyGenAvatar = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Create a script element
-    const script = document.createElement('script');
+    if (!containerRef.current) return;
+
+    // Clear any existing content
+    containerRef.current.innerHTML = '';
     
-    // Set the script content
-    script.innerHTML = `!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJBbm5fRG9jdG9yX1NpdHRpbmdfcHVibGlj%0D%0AIiwicHJldmlld0ltZyI6Imh0dHBzOi8vZmlsZXMyLmhleWdlbi5haS9hdmF0YXIvdjMvMjZkZTM2%0D%0AOWIyZDQ0NDNlNTg2ZGVkZjI3YWYxZTBjMWRfNDU1NzAvcHJldmlld190YWxrXzEud2VicCIsIm5l%0D%0AZWRSZW1vdmVCYWNrZ3JvdW5kIjpmYWxzZSwia25vd2xlZGdlQmFzZUlkIjoiZWU5M2YzNzI3MTdk%0D%0ANDFhMmJhOGFiMDM1YTAyMzQyNjEiLCJ1c2VybmFtZSI6IjlkNjcxNjU4ZjFmOTRiNzE5YjJlNTg4%0D%0ANjM1ZDAxZjdiIn0%3D&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=\`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    left: 40px;\n    bottom: 40px;\n    width: 200px;\n    height: 200px;\n    border-radius: 50%;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    \${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  \`;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);`;
+    // Set up HeyGen iframe
+    const clientWidth = document.body.clientWidth;
     
-    // Make the script non-async to ensure it executes in order
-    script.async = false;
+    // Create the container
+    const container = document.createElement('div');
+    container.id = 'heygen-streaming-container';
+    container.style.width = '100%';
+    container.style.height = '100%';
     
-    // Append the script to the document
-    document.body.appendChild(script);
+    // Create the iframe
+    const iframe = document.createElement('iframe');
+    iframe.allowFullscreen = false;
+    iframe.title = "HeyGen AI Assistant";
+    iframe.role = "dialog";
+    iframe.allow = "microphone";
+    iframe.src = "https://labs.heygen.com/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiJBbm5fRG9jdG9yX1NpdHRpbmdfcHVibGlj%0D%0AIiwicHJldmlld0ltZyI6Imh0dHBzOi8vZmlsZXMyLmhleWdlbi5haS9hdmF0YXIvdjMvMjZkZTM2%0D%0AOWIyZDQ0NDNlNTg2ZGVkZjI3YWYxZTBjMWRfNDU1NzAvcHJldmlld190YWxrXzEud2VicCIsIm5l%0D%0AZWRSZW1vdmVCYWNrZ3JvdW5kIjpmYWxzZSwia25vd2xlZGdlQmFzZUlkIjoiZWU5M2YzNzI3MTdk%0D%0ANDFhMmJhOGFiMDM1YTAyMzQyNjEiLCJ1c2VybmFtZSI6IjlkNjcxNjU4ZjFmOTRiNzE5YjJlNTg4%0D%0ANjM1ZDAxZjdiIn0%3D&inIFrame=1";
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = '0';
+    
+    // Append elements
+    container.appendChild(iframe);
+    containerRef.current.appendChild(container);
     
     return () => {
       // Clean up on component unmount
-      document.body.removeChild(script);
-      
-      // Remove the HeyGen elements if they exist
-      const heygenEmbed = document.getElementById('heygen-streaming-embed');
-      if (heygenEmbed) {
-        document.body.removeChild(heygenEmbed);
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
       }
     };
   }, []);
   
-  // This component doesn't render anything itself
-  return null;
+  return (
+    <div id="heygen-avatar-section" className="max-w-6xl mx-auto my-12 px-6">
+      <h2 className="text-2xl font-bold text-white mb-6 text-center">
+        Interactive AI Veterinary Assistant Demo
+      </h2>
+      <div 
+        ref={containerRef} 
+        className="rounded-lg border border-vetmuted/40 overflow-hidden bg-vetcard shadow-md" 
+        style={{ 
+          width: '100%', 
+          height: '366px',
+          margin: '0 auto'
+        }}
+      ></div>
+      <p className="text-center mt-4 text-gray-300 text-sm">
+        Interact with our AI veterinary assistant powered by HeyGen technology
+      </p>
+    </div>
+  );
 };
 
 export default HeyGenAvatar;

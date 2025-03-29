@@ -48,10 +48,6 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <Features />
-        <Demo />
-        <FAQ />
-        <CTA />
         <div id="disclaimer" className="py-16 px-6 bg-vetchardark">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">🚨 Legal Disclaimer</h2>
@@ -74,11 +70,18 @@ const Index = () => {
             </div>
           </div>
         </div>
+        
+        {/* HeyGen Avatar placed after disclaimer and before Features */}
+        <HeyGenAvatar />
+        
+        <Features />
+        <Demo />
+        <FAQ />
+        <CTA />
       </main>
       <Footer />
       <DisclaimerModal />
       <ElevenLabsWidget />
-      <HeyGenAvatar />
     </div>
   );
 };

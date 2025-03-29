@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -63,12 +62,6 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex items-center space-x-6 mr-4">
-            <a href="#demo" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
-              How It Works
-            </a>
-            <a href="#faq" className="text-gray-300 hover:text-vetprimary transition-colors text-sm whitespace-nowrap">
-              FAQ
-            </a>
             <Button 
               variant="ghost"
               className="text-gray-300 hover:text-vetprimary hover:bg-transparent transition-colors flex items-center gap-1 text-xs p-0 whitespace-nowrap"
@@ -136,7 +129,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu - Optimized */}
+      {/* Mobile Menu - Keep existing mobile menu with all options */}
       <div
         className={cn(
           'fixed inset-x-0 top-[68px] z-40 bg-vetdark/95 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out md:hidden',
