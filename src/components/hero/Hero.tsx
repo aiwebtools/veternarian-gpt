@@ -8,6 +8,30 @@ import HeroDisclaimer from './HeroDisclaimer';
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
+  useEffect(() => {
+    // Use a more reliable way to check if elements are in the viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add visible class with a slight delay to ensure DOM is ready
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 10);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px' // Trigger slightly before element enters viewport
+    });
+    
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
+    
+    return () => {
+      animatedElements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
   // Simplified mouse follow effect with better cross-browser compatibility
   useEffect(() => {
     const floatingBtn = document.querySelector('.floating-btn');
