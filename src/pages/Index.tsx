@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/navbar/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -12,37 +12,6 @@ import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import HeyGenAvatar from '@/components/HeyGenAvatar';
 
 const Index = () => {
-  // Initialize scroll animations when component mounts
-  useEffect(() => {
-    const handleScroll = () => {
-      const animatedElements = document.querySelectorAll('.animate-on-scroll');
-      
-      animatedElements.forEach((element) => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementPosition < windowHeight * 0.85) {
-          element.classList.add('visible');
-        }
-      });
-    };
-
-    // Initial check for elements in view
-    handleScroll();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    // Add dark scrollbar class to body
-    document.body.classList.add('dark-scrollbar');
-    
-    // Clean up
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.body.classList.remove('dark-scrollbar');
-    };
-  }, []);
-
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Divine animated background */}

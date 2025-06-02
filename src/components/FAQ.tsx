@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -9,26 +9,6 @@ import {
 import { PawPrint } from 'lucide-react';
 
 const FAQ = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      animatedElements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   const faqs = [
     {
       question: "What kind of pet health questions can VetGPT answer?",
@@ -59,7 +39,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-24 px-6 md:px-8 bg-vetdark">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-vetmuted text-vetprimary mb-4">
             <PawPrint size={16} className="mr-2" />
             <span>Questions & Answers</span>
@@ -72,7 +52,7 @@ const FAQ = () => {
           </p>
         </div>
         
-        <div className="animate-on-scroll">
+        <div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem 
