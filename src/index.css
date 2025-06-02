@@ -53,7 +53,7 @@
   }
 
   body {
-    @apply bg-vetchardark text-foreground font-sans;
+    @apply bg-gradient-to-br from-slate-900 via-purple-900/30 to-blue-900/30 text-foreground font-sans;
     scroll-behavior: smooth;
     min-height: 100%;
     width: 100%;
@@ -67,13 +67,13 @@
   }
   
   .glass-card {
-    @apply bg-vetcard/80 backdrop-blur-sm border border-vetmuted/20 shadow-glass hover:shadow-glow hover:shadow-primary/30 transition-all duration-300;
+    @apply bg-slate-800/40 backdrop-blur-xl border border-purple-500/20 shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all duration-500;
   }
   
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 1, 0.8, 1), transform 0.8s cubic-bezier(0.2, 1, 0.8, 1);
     will-change: opacity, transform;
   }
   
@@ -85,19 +85,19 @@
   /* Mobile-optimized transitions */
   @media (max-width: 768px) {
     .transition-all {
-      transition-duration: 200ms;
+      transition-duration: 300ms;
     }
     
     .animate-on-scroll {
-      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
   }
   
-  /* More efficient button hover effects for mobile */
+  /* Enhanced button hover effects */
   .btn-hover-effect {
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   }
   
   @media (hover: hover) {
@@ -108,8 +108,8 @@
       height: 100%;
       top: 0;
       left: -100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: all 0.6s ease;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: all 0.8s ease;
     }
     
     .btn-hover-effect:hover:after {
@@ -117,7 +117,7 @@
     }
   }
   
-  /* Optimized animations for better performance */
+  /* Divine shimmer effect */
   .shimmer-effect {
     position: relative;
     overflow: hidden;
@@ -131,127 +131,169 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      animation: shimmer 2s linear infinite;
+      background: linear-gradient(90deg, transparent, rgba(139,92,246,0.3), rgba(59,130,246,0.3), rgba(16,185,129,0.3), transparent);
+      animation: divine-shimmer 3s linear infinite;
     }
   }
   
   .hover-scale {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   }
   
   .hover-scale:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   
   .glow-on-hover:hover {
-    box-shadow: 0 0 15px rgba(79, 107, 255, 0.5);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.4);
   }
   
   .interactive-card {
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.8, 1);
   }
   
   .interactive-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.2);
   }
   
   .text-gradient {
-    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(135deg, #8B5CF6, #3B82F6, #10B981);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
   }
   
-  /* Touch-optimized interactive effects */
+  /* Enhanced magnetic button */
   .magnetic-button {
-    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   }
   
   @media (prefers-reduced-motion: no-preference) {
     .pulse-on-hover:hover {
-      animation: pulse-animation 1.5s infinite;
+      animation: divine-pulse 2s infinite;
     }
   }
   
-  @keyframes pulse-animation {
-    0% { box-shadow: 0 0 0 0 rgba(79, 107, 255, 0.7); }
-    70% { box-shadow: 0 0 0 10px rgba(79, 107, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(79, 107, 255, 0); }
+  @keyframes divine-pulse {
+    0% { 
+      box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.8), 0 0 0 0 rgba(59, 130, 246, 0.6); 
+    }
+    50% { 
+      box-shadow: 0 0 0 20px rgba(139, 92, 246, 0.2), 0 0 0 30px rgba(59, 130, 246, 0.1); 
+    }
+    100% { 
+      box-shadow: 0 0 0 0 rgba(139, 92, 246, 0), 0 0 0 0 rgba(59, 130, 246, 0); 
+    }
   }
   
-  /* Reduced animation complexity for mobile */
+  /* Enhanced neon effects */
   @media (max-width: 768px) {
     .neon-effect {
-      box-shadow: 0 0 5px #3B82F6;
+      box-shadow: 0 0 10px #8B5CF6, 0 0 20px #3B82F6;
     }
   }
   
   @media (min-width: 769px) {
     .neon-effect {
-      box-shadow: 0 0 5px #fff, 
-                  0 0 10px #fff, 
-                  0 0 15px #3B82F6, 
-                  0 0 20px #3B82F6, 
-                  0 0 25px #3B82F6;
+      box-shadow: 0 0 10px #fff, 
+                  0 0 20px #8B5CF6, 
+                  0 0 30px #8B5CF6, 
+                  0 0 40px #3B82F6, 
+                  0 0 50px #3B82F6,
+                  0 0 60px #10B981;
     }
   }
   
   @media (prefers-reduced-motion: no-preference) {
     .floating-element {
-      animation: floating 3s ease-in-out infinite;
+      animation: divine-floating 4s ease-in-out infinite;
     }
   }
   
-  @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+  @keyframes divine-floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(1deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+    75% { transform: translateY(-15px) rotate(0.5deg); }
   }
   
   @media (prefers-reduced-motion: no-preference) {
     .gradient-text-animated {
-      background: linear-gradient(270deg, #3B82F6, #8B5CF6, #10B981);
-      background-size: 200% auto;
+      background: linear-gradient(270deg, #8B5CF6, #3B82F6, #10B981, #F59E0B, #EF4444);
+      background-size: 300% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
-      animation: gradient-animation 3s ease infinite;
+      animation: divine-gradient-animation 4s ease infinite;
     }
   }
   
-  @keyframes gradient-animation {
+  @keyframes divine-gradient-animation {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Divine gradient shift background */
+  @keyframes animate-gradient-shift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
   
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: animate-gradient-shift 20s ease infinite;
+  }
+  
   .btn-3d {
     transform-style: preserve-3d;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.8, 1);
   }
   
   .btn-3d:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-5px) scale(1.08) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.4);
   }
   
   .btn-3d:active {
-    transform: translateY(2px) scale(0.95);
+    transform: translateY(2px) scale(0.98);
   }
   
-  @keyframes shimmer {
+  @keyframes divine-shimmer {
     0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    100% { transform: translateX(200%); }
+  }
+  
+  /* Enhanced floating animation */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    25% { transform: translateY(-25px) translateX(5px) rotate(1deg); }
+    50% { transform: translateY(-10px) translateX(-3px) rotate(-0.5deg); }
+    75% { transform: translateY(-18px) translateX(2px) rotate(0.5deg); }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-float {
+      animation: floating 6s ease-in-out infinite;
+    }
   }
   
   /* Add touch-friendly active states for mobile */
   @media (max-width: 768px) {
     .touch-active:active {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: scale(0.98);
     }
+  }
+  
+  /* Divine border gradients */
+  .border-gradient-to-r {
+    border-image: linear-gradient(to right, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3), rgba(16, 185, 129, 0.3)) 1;
   }
 }
