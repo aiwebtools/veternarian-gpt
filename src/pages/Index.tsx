@@ -53,7 +53,7 @@ const Index = () => {
             <h2 className="text-2xl font-bold text-white mb-6 text-center">🚨 Legal Disclaimer</h2>
             <div className="bg-vetcard/80 p-6 rounded-lg border border-vetmuted/40 shadow-md">
               <p className="text-gray-200 mb-4">
-                <strong>Not a Substitute for Professional Care:</strong> PetCareGPT is an AI tool designed to provide general information about pet health. It is not a substitute for professional veterinary advice, diagnosis, or treatment. This service does not establish a veterinarian-client-patient relationship (VCPR).
+                <strong>Not a Substitute for Professional Care:</strong> PetCareGPT is an AI tool designed to provide general information about pet health. It is not a substitute for professional veterinary advice, diagnosis, or treatment. This service does not establish a veterinarian-client-patient relationship (VCPR). This service is provided for informational, educational, and research purposes only.
               </p>
               <p className="text-gray-200 mb-4">
                 <strong>Emergency Situations:</strong> Always seek the advice of your veterinarian with any questions you may have regarding your pet's medical condition. Never disregard professional veterinary advice or delay in seeking it because of something you have read on this website or received from this AI tool.

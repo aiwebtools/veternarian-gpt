@@ -21,11 +21,11 @@ const HeroDisclaimer = () => {
             While we strive for accuracy, all advice is for informational purposes only. Users must verify any information before making pet healthcare decisions. For urgent or serious pet health concerns, contact a licensed veterinarian immediately. In emergencies, seek immediate veterinary assistance or visit an animal hospital.
           </p>
           <p className="text-sm text-gray-200 leading-relaxed mb-4">
-            By using this tool, you acknowledge its limitations and agree to seek professional veterinary care when needed.
+            By using this tool, you acknowledge its limitations and agree to seek professional veterinary care when needed. This service is provided for informational, educational, and research purposes only.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Button asChild variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-vetprimary hover:text-white hover:border-vetprimary">
-              <a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer">
+              <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer">
                 <Shield className="h-4 w-4 mr-2" />Terms of Service
               </a>
             </Button>

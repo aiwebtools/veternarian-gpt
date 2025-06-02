@@ -61,7 +61,7 @@ const Footer = () => {
               </div>
             </a>
             <p className="text-gray-400 mb-4">
-              AI-powered virtual veterinary assistance providing general pet health information only. Not a substitute for professional veterinary care.
+              AI-powered virtual veterinary assistance providing general pet health information only. Not a substitute for professional veterinary care. For informational, educational, and research purposes only.
             </p>
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle size={14} className="text-yellow-500" />
@@ -84,7 +84,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="https://aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About Us</a></li>
               <li><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Privacy Policy</a></li>
-              <li><a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Terms of Service</a></li>
+              <li><a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Terms of Service</a></li>
               <li><Button 
                   variant="outline" 
                   size="sm" 
@@ -163,7 +163,7 @@ const Footer = () => {
                   size="sm" 
                   className="text-gray-300 border-gray-700 hover:bg-vetprimary hover:text-white"
                 >
-                  <a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer">
+                  <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer">
                     <Shield size={12} className="mr-2" />
                     TERMS OF SERVICE
                   </a>
