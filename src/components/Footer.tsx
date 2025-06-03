@@ -44,7 +44,7 @@ const Footer = () => {
             <a href="#" className="flex flex-col items-start hover-scale mb-4">
               <div className="flex items-center space-x-2 mb-2">
                 <PawPrint size={24} className="text-vetprimary" />
-                <span className="text-xl font-semibold text-white">PetCareGPT</span>
+                <span className="text-xl font-semibold text-white">PetCareGPT by AI Web Tools</span>
               </div>
               <div className="ml-9">
                 <a 
@@ -53,36 +53,36 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="text-xs text-gray-400 block hover:text-vetprimary transition-colors"
                 >
-                  Presented by AiWebTools.Ai
+                  Powered by AIWEBTOOLS.AI - Leading AI Tools Provider
                 </a>
                 <span className="text-xs text-white flex items-center">
-                  Made with <Heart size={12} className="mx-1 text-[#ea384c] animate-pulse" fill="#ea384c" /> for better and free healthcare
+                  Made with <Heart size={12} className="mx-1 text-[#ea384c] animate-pulse" fill="#ea384c" /> for better and free AI healthcare tools
                 </span>
               </div>
             </a>
             <p className="text-gray-400 mb-4">
-              AI-powered virtual veterinary assistance providing general pet health information only. Not a substitute for professional veterinary care. For informational, educational, and research purposes only.
+              AI Web Tools' premier AI-powered virtual veterinary assistance platform providing comprehensive pet health information. Our advanced AI tools deliver professional-grade veterinary guidance for pet owners worldwide. Not a substitute for professional veterinary care. For informational, educational, and research purposes only.
             </p>
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle size={14} className="text-yellow-500" />
               <span className="text-xs text-gray-400">
-                Does not establish a veterinarian-client-patient relationship (VCPR)
+                AI Web Tools - Does not establish a veterinarian-client-patient relationship (VCPR)
               </span>
             </div>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-vetprimary transition-colors">
+              <a href="https://www.instagram.com/aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-vetprimary transition-colors" aria-label="AI Web Tools Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="https://www.tiktok.com/@aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-vetprimary transition-colors">
+              <a href="https://www.tiktok.com/@aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-vetprimary transition-colors" aria-label="AI Web Tools TikTok">
                 <TikTokIcon className="h-6 w-6" />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Legal Information</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">AI Web Tools - Legal Info</h3>
             <ul className="space-y-3">
-              <li><a href="https://aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About Us</a></li>
+              <li><a href="https://aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About AI Web Tools</a></li>
               <li><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Privacy Policy</a></li>
               <li><a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Terms of Service</a></li>
               <li><Button 
@@ -96,7 +96,7 @@ const Footer = () => {
                 </Button>
               </li>
               <li>
-                <span className="text-gray-400 font-semibold">Contact:</span>
+                <span className="text-gray-400 font-semibold">Contact AI Web Tools:</span>
                 <div className="ml-2 mt-1 space-y-2">
                   <a href="mailto:contact@ai-webtools.com" className="text-gray-400 hover:text-vetprimary hover-scale flex items-center gap-2">
                     <Mail size={14} className="text-vetprimary" />
@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">More AI Tools by AIWEBTOOLS.AI</h3>
             <ul className="space-y-3">
               <li>
                 <Button 
@@ -121,7 +121,7 @@ const Footer = () => {
                   className="text-gray-300 border-gray-700 hover:bg-vetprimary hover:text-white"
                   onClick={() => window.open('https://www.aiwebtools.ai', '_blank')}
                 >
-                  MORE AI TOOLS
+                  ALL AI WEB TOOLS
                 </Button>
               </li>
               <li>
@@ -132,7 +132,7 @@ const Footer = () => {
                   onClick={() => window.open('https://mentalwellnessgpt.lovable.app/', '_blank')}
                 >
                   <Brain size={12} className="mr-2" />
-                  MENTAL WELLNESS GPT
+                  MENTAL WELLNESS AI
                 </Button>
               </li>
               <li>
@@ -182,12 +182,12 @@ const Footer = () => {
               rel="noopener noreferrer" 
               className="text-gray-500 hover:text-vetprimary transition-colors"
             >
-              AI WEB TOOLS LLC
+              AI WEB TOOLS LLC - AIWEBTOOLS.AI
             </a>
             . All rights reserved.
           </p>
           <p className="text-gray-500 text-xs mt-2 md:mt-0">
-            PetCareGPT is for informational purposes only. Not a substitute for professional veterinary care.
+            AI Web Tools - PetCareGPT is for informational, educational, and research purposes only. Not a substitute for professional veterinary care.
           </p>
         </div>
       </div>
