@@ -119,7 +119,7 @@ const Footer = () => {
                   variant="outline" 
                   size="sm" 
                   className="text-gray-300 border-gray-700 hover:bg-vetprimary hover:text-white"
-                  onClick={() => window.open('https://www.aiwebtools.ai', '_blank')}
+                  onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
                 >
                   ALL AI WEB TOOLS
                 </Button>
