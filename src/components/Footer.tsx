@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
               <div className="ml-9">
                 <a 
-                  href="https://aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-xs text-gray-400 block hover:text-vetprimary transition-colors"
