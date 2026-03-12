@@ -10,7 +10,7 @@ const NavbarLogo = () => {
         <span className="text-xl font-semibold text-white">PetCareGPT</span>
       </div>
       <a 
-        href="https://aiwebtools.ai" 
+        href="https://aiwebtools.lovable.app/?via=aiwebtools" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="text-xs text-gray-400 ml-9 hover:text-vetprimary transition-colors"

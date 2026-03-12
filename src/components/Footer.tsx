@@ -177,7 +177,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} {" "}
             <a 
-              href="https://aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-500 hover:text-vetprimary transition-colors"

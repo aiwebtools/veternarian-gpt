@@ -18,9 +18,10 @@ const NavbarMobileMenu = ({
   return (
     <div
       className={cn(
-        'fixed inset-x-0 top-[68px] z-40 bg-vetdark/95 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out md:hidden',
-        mobileMenuOpen ? 'max-h-screen py-4' : 'max-h-0 overflow-hidden py-0'
+        'fixed inset-x-0 top-[56px] z-40 bg-vetdark/95 backdrop-blur-md shadow-md md:hidden overflow-hidden',
+        mobileMenuOpen ? 'max-h-[80vh] py-4 opacity-100 overflow-y-auto' : 'max-h-0 py-0 opacity-0'
       )}
+      style={{ transition: 'max-height 0.2s ease-in-out, padding 0.15s ease-in-out, opacity 0.15s ease-in-out' }}
     >
       <div className="flex flex-col space-y-3 px-6">
         <a 
