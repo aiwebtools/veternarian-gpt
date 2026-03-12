@@ -82,7 +82,7 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">AI Web Tools - Legal Info</h3>
             <ul className="space-y-3">
-              <li><a href="https://aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About AI Web Tools</a></li>
+              <li><a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About AI Web Tools</a></li>
               <li><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Privacy Policy</a></li>
               <li><a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Terms of Service</a></li>
               <li><Button 
