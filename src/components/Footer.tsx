@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
               <div className="ml-9">
                 <a 
-                  href="https://aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-xs text-gray-400 block hover:text-vetprimary transition-colors"
@@ -82,7 +82,7 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">AI Web Tools - Legal Info</h3>
             <ul className="space-y-3">
-              <li><a href="https://aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About AI Web Tools</a></li>
+              <li><a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">About AI Web Tools</a></li>
               <li><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Privacy Policy</a></li>
               <li><a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-vetprimary hover-scale inline-block">Terms of Service</a></li>
               <li><Button 
@@ -119,7 +119,7 @@ const Footer = () => {
                   variant="outline" 
                   size="sm" 
                   className="text-gray-300 border-gray-700 hover:bg-vetprimary hover:text-white"
-                  onClick={() => window.open('https://www.aiwebtools.ai', '_blank')}
+                  onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
                 >
                   ALL AI WEB TOOLS
                 </Button>
@@ -177,7 +177,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} {" "}
             <a 
-              href="https://aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-500 hover:text-vetprimary transition-colors"
